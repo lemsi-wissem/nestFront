@@ -1,0 +1,44 @@
+<nav class="p-2 flex flex-row justify-between">
+  <div class="text-amber-600 text-bg-danger">Breadcumb</div>
+  <ul>
+    <li>Notif</li>
+    <li>Wissem Lemsi</li>
+  </ul>
+</nav>
+<form (ngSubmit)="add()" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+  <div class="mb-4">
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="title">
+      Title
+    </label>
+    <input [(ngModel)]="livre.title" name="title" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="title" type="text" placeholder="Title">
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="author">
+      Author
+    </label>
+    <input [(ngModel)]="livre.author" name="author" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="author" type="text" placeholder="Author">
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="publishedDate">
+      Published Date
+    </label>
+    <input [(ngModel)]="livre.publishedDate" name="publishedDate" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="publishedDate" type="date">
+  </div>
+  <div class="mb-4">
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="isbn">
+      ISBN
+    </label>
+    <input [(ngModel)]="livre.isbn" name="isbn" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="isbn" type="text" placeholder="ISBN">
+  </div>
+  <div class="mb-6">
+    <label class="block text-gray-700 text-sm font-bold mb-2" for="summary">
+      Summary
+    </label>
+    <textarea [(ngModel)]="livre.summary" name="summary" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="summary" placeholder="Summary"></textarea>
+  </div>
+  <div class="flex items-center justify-between">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+      Add Livre
+    </button>
+  </div>
+</form>

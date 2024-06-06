@@ -1,0 +1,47 @@
+<nav class="p-2 flex flex-row justify-between">
+  <div class="text-amber-600 text-bg-danger">Breadcumb</div>
+  <ul>
+    <li>Notif</li>
+    <li>Wissem Lemsi</li>
+  </ul>
+</nav>
+<div class="bg-slate-50 h-[calc(100vh-100px)] p-4">
+  <div class="bg-white shadow-md p-4 space-y-4">
+    <div class="flex items-center justify-between">
+      <h1 class="text-lg font-bold">Liste des livres</h1>
+      <button class="bg-blue-600 text-gray-50 font-medium px-3 py-2 rounded-md" (click)="addLivre()">Ajouter</button>
+    </div>
+    <table class="w-full">
+      <thead>
+        <tr class="bg-gray-50 font-semibold">
+          <th class="px-4 py-2 text-start">Titre</th>
+          <th class="px-4 py-2 text-start">Auteur</th>
+          <th class="px-4 py-2 text-start">Date</th>
+          <th class="px-4 py-2 text-start">Résumé</th>
+          <th class="px-4 py-2 text-start">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let livre of livres" class="hover:bg-blue-50">
+          <td class="px-4 py-2 text-start">{{ livre.title }}</td>
+          <td class="px-4 py-2 text-start">{{ livre.author }}</td>
+          <td class="px-4 py-2 text-start">{{ livre.publishedDate | date: 'dd/MM/yyyy' }}</td>
+          <td class="px-4 py-2 text-start">{{ livre.summary }}</td>
+          <td class="px-4 py-2 text-start">
+            <div class="flex items-center space-x-4">
+              <button (click)="getDetails(livre.id)" class="bg-blue-600 text-gray-50 font-medium px-3 py-2 rounded-md space-x-1">
+                <span>Visualiser</span>
+              </button>
+              <button (click)="modify(livre.id)" class="bg-blue-600 text-gray-50 font-medium px-3 py-2 rounded-md space-x-1">
+                <span>Modifier</span>
+              </button>
+              <button (click)="deleteLivre(livre.id)" class="bg-blue-600 text-gray-50 font-medium px-3 py-2 rounded-md space-x-1">
+                <span>Supprimer</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
