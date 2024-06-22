@@ -26,4 +26,9 @@ export class AjoutLivreComponent {
       }
     );
   }
+
+  signOut() {
+    this.livreService.signOut();
+    this.router.navigate(['/login']);
+  }
 }

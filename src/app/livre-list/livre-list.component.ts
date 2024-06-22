@@ -33,4 +33,9 @@ export class LivreListComponent implements OnInit{
     modify(id: number) {
     this.router.navigate(['/livre/' + id + '/edit']);
   }
+
+  signOut() {
+    this.livreService.signOut();
+    this.router.navigate(['/login']);
+  }
 }

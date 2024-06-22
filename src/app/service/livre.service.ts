@@ -30,4 +30,8 @@ export class LivreService {
   updateLivre(livre: Livre, id: number): Observable<any> {
     return this.httpClient.put(`http://localhost:3000/livre/${id}`, livre);
   }
+
+  signOut() {
+    localStorage.removeItem('token');
+  }
 }

@@ -24,4 +24,9 @@ export class DetailsLivreComponent implements OnInit{
     this.router.navigate(['/livre']);
   }
 
+  signOut() {
+    this.livreService.signOut();
+    this.router.navigate(['/login']);
+  }
+
 }

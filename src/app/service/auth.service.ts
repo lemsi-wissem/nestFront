@@ -19,9 +19,9 @@ export class AuthService {
     return this.http.post('http://localhost:3000/users', details);
   }
 
-  isAuthenticated(): boolean {
+  isAuthenticated(): Observable<any> {
     const token = localStorage.getItem('token');
-    return !!token;
+    return this.http.get('http://localhost:3000/auth/validate');
   }
 
   signup(credentials: {password: string; username: string}) {
