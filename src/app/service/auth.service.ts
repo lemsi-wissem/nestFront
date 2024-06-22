@@ -23,4 +23,8 @@ export class AuthService {
     const token = localStorage.getItem('token');
     return !!token;
   }
+
+  signup(credentials: {password: string; username: string}) {
+    return this.http.post('http://localhost:3000/users', credentials);
+  }
 }

@@ -12,6 +12,7 @@ import { AjoutLivreComponent } from './ajout-livre/ajout-livre.component';
 import { DetailsLivreComponent } from './details-livre/details-livre.component';
 import { EditLivreComponent } from './edit-livre/edit-livre.component';
 import {DatePipe} from "@angular/common";
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {DatePipe} from "@angular/common";
     LivreListComponent,
     AjoutLivreComponent,
     DetailsLivreComponent,
-    EditLivreComponent
+    EditLivreComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
